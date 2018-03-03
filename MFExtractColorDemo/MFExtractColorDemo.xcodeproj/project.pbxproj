@@ -13,6 +13,8 @@
 		5E0AD2C6204A493A0008F2BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD2C5204A493A0008F2BA /* Assets.xcassets */; };
 		5E0AD2C9204A493A0008F2BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD2C7204A493A0008F2BA /* LaunchScreen.storyboard */; };
 		5E0AD2CC204A493A0008F2BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD2CB204A493A0008F2BA /* main.m */; };
+		5E0AD2D5204A499F0008F2BA /* MFExtractColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD2D4204A499F0008F2BA /* MFExtractColor.m */; };
+		5E187F21204A8CB600C16E75 /* UIImage+ExtractColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E187F20204A8CB600C16E75 /* UIImage+ExtractColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		5E0AD2C8204A493A0008F2BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E0AD2CA204A493A0008F2BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E0AD2CB204A493A0008F2BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E0AD2D3204A499F0008F2BA /* MFExtractColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFExtractColor.h; sourceTree = "<group>"; };
+		5E0AD2D4204A499F0008F2BA /* MFExtractColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFExtractColor.m; sourceTree = "<group>"; };
+		5E187F1F204A8CB600C16E75 /* UIImage+ExtractColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ExtractColor.h"; sourceTree = "<group>"; };
+		5E187F20204A8CB600C16E75 /* UIImage+ExtractColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ExtractColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		5E0AD2BB204A493A0008F2BA /* MFExtractColorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5E0AD2D2204A49860008F2BA /* MFExtractColor */,
 				5E0AD2BC204A493A0008F2BA /* AppDelegate.h */,
 				5E0AD2BD204A493A0008F2BA /* AppDelegate.m */,
 				5E0AD2BF204A493A0008F2BA /* ViewController.h */,
@@ -69,6 +76,17 @@
 				5E0AD2CB204A493A0008F2BA /* main.m */,
 			);
 			path = MFExtractColorDemo;
+			sourceTree = "<group>";
+		};
+		5E0AD2D2204A49860008F2BA /* MFExtractColor */ = {
+			isa = PBXGroup;
+			children = (
+				5E0AD2D3204A499F0008F2BA /* MFExtractColor.h */,
+				5E0AD2D4204A499F0008F2BA /* MFExtractColor.m */,
+				5E187F1F204A8CB600C16E75 /* UIImage+ExtractColor.h */,
+				5E187F20204A8CB600C16E75 /* UIImage+ExtractColor.m */,
+			);
+			path = MFExtractColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E0AD2D5204A499F0008F2BA /* MFExtractColor.m in Sources */,
 				5E0AD2C1204A493A0008F2BA /* ViewController.m in Sources */,
 				5E0AD2CC204A493A0008F2BA /* main.m in Sources */,
 				5E0AD2BE204A493A0008F2BA /* AppDelegate.m in Sources */,
+				5E187F21204A8CB600C16E75 /* UIImage+ExtractColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D33D27VC6;
 				INFOPLIST_FILE = MFExtractColorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.microfeel.MFExtractColorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5D33D27VC6;
 				INFOPLIST_FILE = MFExtractColorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.microfeel.MFExtractColorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
