@@ -1,6 +1,7 @@
 # MFExtractColor
 
 [Port of ColorArt code from OS X to iOS.](https://github.com/panicinc/ColorArt)
+Fetches the most dominant and prominent colors from an image.
 
 ## 集成方式
 - cocoapod
