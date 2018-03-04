@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MFExtractColor'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Fetches the most dominant and prominent colors from an image.'
 
 

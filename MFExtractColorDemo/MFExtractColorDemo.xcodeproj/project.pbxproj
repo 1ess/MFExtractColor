@@ -14,7 +14,6 @@
 		5E0AD2C9204A493A0008F2BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AD2C7204A493A0008F2BA /* LaunchScreen.storyboard */; };
 		5E0AD2CC204A493A0008F2BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD2CB204A493A0008F2BA /* main.m */; };
 		5E0AD2D5204A499F0008F2BA /* MFExtractColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0AD2D4204A499F0008F2BA /* MFExtractColor.m */; };
-		5E187F21204A8CB600C16E75 /* UIImage+ExtractColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E187F20204A8CB600C16E75 /* UIImage+ExtractColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +29,6 @@
 		5E0AD2CB204A493A0008F2BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E0AD2D3204A499F0008F2BA /* MFExtractColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFExtractColor.h; sourceTree = "<group>"; };
 		5E0AD2D4204A499F0008F2BA /* MFExtractColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFExtractColor.m; sourceTree = "<group>"; };
-		5E187F1F204A8CB600C16E75 /* UIImage+ExtractColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ExtractColor.h"; sourceTree = "<group>"; };
-		5E187F20204A8CB600C16E75 /* UIImage+ExtractColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ExtractColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +80,6 @@
 			children = (
 				5E0AD2D3204A499F0008F2BA /* MFExtractColor.h */,
 				5E0AD2D4204A499F0008F2BA /* MFExtractColor.m */,
-				5E187F1F204A8CB600C16E75 /* UIImage+ExtractColor.h */,
-				5E187F20204A8CB600C16E75 /* UIImage+ExtractColor.m */,
 			);
 			path = MFExtractColor;
 			sourceTree = "<group>";
@@ -164,7 +159,6 @@
 				5E0AD2C1204A493A0008F2BA /* ViewController.m in Sources */,
 				5E0AD2CC204A493A0008F2BA /* main.m in Sources */,
 				5E0AD2BE204A493A0008F2BA /* AppDelegate.m in Sources */,
-				5E187F21204A8CB600C16E75 /* UIImage+ExtractColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "MFExtractColor.h"
+#import <Photos/Photos.h>
 @interface ViewController ()
 <
 UIImagePickerControllerDelegate,
@@ -96,31 +97,45 @@ UINavigationControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     [self dismissViewControllerAnimated:YES completion:^{
-        UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-        image = [self scaleImage:image toScale:0.5];
-        self.imageView.image = image;
-        [MFExtractColor extractColorFromImage:image scaled:CGSizeMake(512, 512) completionHandler:^(MFExtractColor *extractColor) {
-            self.extractColor = extractColor;
+        PHAsset *asset = nil;
+        if (@available(iOS 11.0, *)) {
+            asset = [info objectForKey:UIImagePickerControllerPHAsset];
+        } else {
+            NSURL *imageAssetUrl = [info objectForKey:UIImagePickerControllerReferenceURL];
+            PHFetchResult *result = [PHAsset fetchAssetsWithALAssetURLs:@[imageAssetUrl] options:nil];
+            asset = [result firstObject];
+            
+        }
+        [self getPhotoWithAsset:asset progress:^(double progress, NSError * _Nullable error, BOOL * _Nonnull stop, NSDictionary * _Nullable info) {
+            //不走这个callback，不知道什么bug
+        } completion:^(UIImage *image, NSDictionary *info) {
+            self.imageView.image = image;
+            [MFExtractColor extractColorFromImage:image scaled:CGSizeMake(512, 512) completionHandler:^(MFExtractColor *extractColor) {
+                self.extractColor = extractColor;
+            }];
         }];
-        
-        
-        
     }];
 }
 
-- (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize {
-
-    UIGraphicsBeginImageContext(CGSizeMake(image.size.width*scaleSize,image.size.height*scaleSize));
-    [image drawInRect:CGRectMake(0, 0, image.size.width * scaleSize, image.size.height *scaleSize)];
-    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-
-    return scaledImage;
-}
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:^{
         
+    }];
+}
+
+- (void)getPhotoWithAsset:(PHAsset *)asset progress:(PHAssetImageProgressHandler)progressHandler completion:(void (^)(UIImage *, NSDictionary *))completion {
+    
+    PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
+    option.networkAccessAllowed = YES;
+    option.progressHandler = progressHandler;
+    
+    [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:PHImageManagerMaximumSize contentMode:PHImageContentModeDefault options:option resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        if (result) {
+            if (completion) dispatch_async(dispatch_get_main_queue(), ^{
+                completion(result, info);
+            });
+        }
     }];
 }
 
