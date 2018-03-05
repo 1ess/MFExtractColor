@@ -3,6 +3,8 @@
 [Port of ColorArt code from OS X to iOS.](https://github.com/panicinc/ColorArt)
 Fetches the most dominant and prominent colors from an image.
 
+自动从图片中提取主要颜色，参见ZEEEN (Dribbble client for iOS).
+
 ## 集成方式
 - cocoapod
 ```
