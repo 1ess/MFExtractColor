@@ -4,7 +4,7 @@
 Fetches the most dominant and prominent colors from an image.
 
 自动从图片中提取主要颜色，参见ZEEEN (Dribbble client for iOS).
-<img src="https://github.com/GodzzZZZ/MFExtractColor/blob/master/images/A22B566BD9C72AA0B7F02A6FB9B9DB85.jpg" width="100%"/>
+<img src="https://github.com/GodzzZZZ/Warehouse/blob/master/MFExtractColor/A22B566BD9C72AA0B7F02A6FB9B9DB85.jpg" width="100%"/>
 
 ## 集成方式
 - cocoapod
@@ -13,7 +13,7 @@ pod 'MFExtractColor'
 ```
 
 ## 效果
-<img src="https://github.com/GodzzZZZ/MFExtractColor/blob/master/images/3E8831B5AD9F211EA73D352FB378336C.png" width="25%"/><img src="https://github.com/GodzzZZZ/MFExtractColor/blob/master/images/72367807E93462F36AF0CD6FBAB4D617.png" width="25%"/><img src="https://github.com/GodzzZZZ/MFExtractColor/blob/master/images/876B683F3E5DE09FE8A5C17B5736AFAA.png" width="25%"/><img src="https://github.com/GodzzZZZ/MFExtractColor/blob/master/images/D9F1D3D803D561CF4F8960A5A0C20C2C.png" width="25%"/>
+<img src="https://github.com/GodzzZZZ/Warehouse/blob/master/MFExtractColor/3E8831B5AD9F211EA73D352FB378336C.png" width="25%"/><img src="https://github.com/GodzzZZZ/Warehouse/blob/master/MFExtractColor/72367807E93462F36AF0CD6FBAB4D617.png" width="25%"/><img src="https://github.com/GodzzZZZ/Warehouse/blob/master/MFExtractColor/876B683F3E5DE09FE8A5C17B5736AFAA.png" width="25%"/><img src="https://github.com/GodzzZZZ/Warehouse/blob/master/MFExtractColor/D9F1D3D803D561CF4F8960A5A0C20C2C.png" width="25%"/>
 
 
 ## about
