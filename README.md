@@ -6,6 +6,12 @@ Fetches the most dominant and prominent colors from an image.
 自动从图片中提取主要颜色，参见ZEEEN (Dribbble client for iOS).
 <img src="https://github.com/GodzzZZZ/MFExtractColor/blob/master/SnapShot/1.jpg" width="100%"/>
 
+![DUB](https://img.shields.io/dub/l/vibe-d.svg)
+![Total-downloads](https://img.shields.io/cocoapods/dt/MFExtractColor.svg)
+![Version](https://img.shields.io/cocoapods/v/MFExtractColor.svg?style=flat)
+![Platform](https://img.shields.io/cocoapods/p/MFExtractColor.svg?style=flat)
+![Language](https://img.shields.io/badge/language-objectivec-blue.svg)
+
 ## 集成方式
 - cocoapod
 ```
